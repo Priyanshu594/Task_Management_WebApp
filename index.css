@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+
+body{
+    background-color: rgb(219, 230, 250);
+}
+.add_new_button_mobile_only{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 10px;
+}
+
+   @media  (min-width: 760px){
+    .mobile-button{
+        display: none;
+        visibility: hidden;
+    } 
+}
