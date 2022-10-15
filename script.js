@@ -13,12 +13,11 @@ const htmlTaskContent = ({ id, title, description, type, url}) => `
 <div class='card shadow-sm task_card'>
 <div class='card-header d-flex gap-2 justify-content-end task_card_header' >
 
-<button type='button' class='btn btn-outline-info mr-2'  name=${id} style="height: 2rem" onclick="editTask.apply(this, arguments)">
-<i class="fa-solid fa-pencil"></i>
+<button type='button' class='btn btn-outline-info mr-2'  name=${id} onclick="editTask.apply(this, arguments)">
+Edit
 </button>
 
-<button type='button' class='btn btn-outline-danger mr-2' onclick="deleteTask.apply(this, arguments)" name=${id}>
-<i class="fas fa-trash-alt" name=${id}></i>
+<button type='button' class='btn btn-outline-danger mr-2' onclick="deleteTask.apply(this, arguments)" name=${id}>Delete
 </button>
 </div>
  <div class='card-body'>
@@ -169,11 +168,7 @@ const editTask = (e) => {
     let taskType;
     let submitButton;
 
-    if(type === "BUTTON"){
         parentNode = e.target.parentNode.parentNode;
-    } else {
-        parentNode = e.target.parentNode.parentNode.parentNode;
-    }
 
     taskTitle = parentNode.childNodes[3].childNodes[3];
     taskDesription = parentNode.childNodes[3].childNodes[5];
